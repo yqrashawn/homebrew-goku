@@ -4,14 +4,17 @@ class Goku < Formula
   depends_on "watchexec"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
-  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.1.3/goku"
-  sha256 "ff31ad1dcd0c4cd50783af8554351aea3c6968d0b38e1d17fecb164421f38221"
+  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.1.6/goku.tar.gz"
+  sha256 "52ff3771ccc06f1f3da8a68253930e638da2543d39f7d109f907c2ec4018c085"
 
   def install
+    # system "tar", "xzf", "goku.tar.gz"
+    system "chmod", "+x", "gokuw"
     bin.install "goku"
+    bin.install "gokuw"
   end
 
-  plist_options :startup => true
+  plist_options :manual => "gokuw"
 
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
