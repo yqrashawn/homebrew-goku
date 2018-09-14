@@ -1,6 +1,6 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
-class Gokurakujoudo < Formula
+class Goku < Formula
   depends_on "watchexec"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
@@ -26,7 +26,7 @@ class Gokurakujoudo < Formula
         <string>--restart</string>
         <string>--watch</string>
         <string>#{ENV["HOME"]}/.config/karabiner.edn</string>
-        <string>/usr/local/opt/gokurakujoudo/bin/goku</string>
+        <string>/usr/local/opt/goku/bin/goku</string>
       </array>
       <key>StandardErrorPath</key>
       <string>#{ENV["HOME"]}/Library/Logs/goku/error.log</string>
