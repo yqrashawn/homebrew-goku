@@ -8,7 +8,7 @@ class Goku < Formula
   sha256 "52ff3771ccc06f1f3da8a68253930e638da2543d39f7d109f907c2ec4018c085"
 
   def install
-    # system "tar", "xzf", "goku.tar.gz"
+    system "mkdir", "-p", "#{ENV['HOME']}/Library/Logs/goku/"
     system "chmod", "+x", "gokuw"
     bin.install "goku"
     bin.install "gokuw"
