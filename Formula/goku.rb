@@ -30,9 +30,9 @@ class Goku < Formula
         <string>/usr/local/opt/goku/bin/goku</string>
       </array>
       <key>StandardErrorPath</key>
-      <string>#{ENV["HOME"]}/Library/Logs/goku/output.log</string>
+      <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
       <key>StandardOutPath</key>
-      <string>#{ENV["HOME"]}/Library/Logs/goku/output.log</string>
+      <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
       <key>RunAtLoad</key>
       <true/>
     </dict>
