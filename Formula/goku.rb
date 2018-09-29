@@ -8,8 +8,6 @@ class Goku < Formula
   sha256 "e808d435ee230462180384035775d344eadd0f3756ea239fc3ff9f200f612716"
 
   def install
-    system "mkdir", "-p", "#{ENV['HOME']}/Library/Logs/goku/"
-    system "chmod", "+x", "gokuw"
     bin.install "goku"
     bin.install "gokuw"
   end
@@ -32,7 +30,7 @@ class Goku < Formula
         <string>/usr/local/opt/goku/bin/goku</string>
       </array>
       <key>StandardErrorPath</key>
-      <string>#{ENV["HOME"]}/Library/Logs/goku/error.log</string>
+      <string>#{ENV["HOME"]}/Library/Logs/goku/output.log</string>
       <key>StandardOutPath</key>
       <string>#{ENV["HOME"]}/Library/Logs/goku/output.log</string>
       <key>RunAtLoad</key>
