@@ -4,8 +4,8 @@ class Goku < Formula
   depends_on "watchexec"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
-  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.1.9/goku.tar.gz"
-  sha256 "ae2eaca220be34d962f4ad3785dadb1946b0c19264bd663f7f748732a276b423"
+  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.1.10/goku.tar.gz"
+  sha256 "f42a1a0e7a037a1a1f2e2f8da256877836b506e086919d1810b5981ea8e918d1"
 
   def install
     bin.install "goku"
