@@ -2,8 +2,8 @@
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
 class Goku < Formula
   depends_on "watchexec"
-  # depends_on "candid82/brew/joker"
-  depends_on "https://raw.githubusercontent.com/candid82/homebrew-brew/2491ed79f9733e6d58b41eef0a771659a0eed162/joker.rb"
+  depends_on "candid82/brew/joker"
+  # depends_on "https://raw.githubusercontent.com/candid82/homebrew-brew/2491ed79f9733e6d58b41eef0a771659a0eed162/joker.rb"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
   url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.1.14/goku.tar.gz"
