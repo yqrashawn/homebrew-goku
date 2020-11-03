@@ -6,8 +6,8 @@ class Goku < Formula
   # depends_on "https://raw.githubusercontent.com/candid82/homebrew-brew/2491ed79f9733e6d58b41eef0a771659a0eed162/joker.rb"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
-  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.3.2/goku.tar.gz"
-  sha256 "804bf68f9991a893fe299cea2192d35d1cd0a5dfb56b79a5f6bf91ad3090a94a"
+  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.3.3/goku.tar.gz"
+  sha256 "9e4500646df377b2502fd61d4f9f4dcae6cb0b5dec26f8f721b8d2e56d5831ff"
 
   def install
     bin.install "goku"
