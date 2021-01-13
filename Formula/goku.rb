@@ -6,8 +6,8 @@ class Goku < Formula
   # depends_on "https://raw.githubusercontent.com/candid82/homebrew-brew/2491ed79f9733e6d58b41eef0a771659a0eed162/joker.rb"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
-  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.3.5/goku.tar.gz"
-  sha256 "c2bb1744e222e18b3b20697a4da87e609228b4d85817bcb37eff582007049298"
+  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.3.6/goku.tar.gz"
+  sha256 "519def2a0a52a9dad434b9c2a5c85351694966bba0cc68bdbb1f2faac50c5adf"
 
   def install
     bin.install "goku"
@@ -25,11 +25,9 @@ class Goku < Formula
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>/usr/local/opt/watchexec/bin/watchexec</string>
-        <string>--restart</string>
-        <string>--watch</string>
-        <string>#{ENV["HOME"]}/.config/karabiner.edn</string>
-        <string>/usr/local/opt/goku/bin/goku</string>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>exec -a gokuw #{Formula["watchexec"].opt_bin}/watchexec --restart --watch #{ENV["HOME"]}/.config/karabiner.edn #{opt_bin}/goku</string>
       </array>
       <key>StandardErrorPath</key>
       <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
