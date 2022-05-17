@@ -37,7 +37,8 @@ class Goku < Formula
       <true/>
     </dict>
     </plist>
-  EOS   end
+  EOS
+  end
 
   test do
     system "#{bin}/goku", "--help"
