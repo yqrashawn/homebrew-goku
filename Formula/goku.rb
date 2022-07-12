@@ -25,9 +25,9 @@ class Goku < Formula
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>/bin/sh</string>
+        <string>/bin/zsh</string>
         <string>-c</string>
-        <string>exec -a gokuw #{Formula["watchexec"].opt_bin}/watchexec --restart --watch #{ENV["HOME"]}/.config/karabiner.edn #{opt_bin}/goku</string>
+        <string>exec -a gokuw #{Formula["watchexec"].opt_bin}/watchexec --restart -e edn --watch #{ENV["HOME"]}/.config/karabiner.edn #{opt_bin}/goku</string>
       </array>
       <key>StandardErrorPath</key>
       <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
