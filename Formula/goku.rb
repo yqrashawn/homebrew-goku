@@ -1,13 +1,12 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
 class Goku < Formula
-  depends_on "watchexec"
   depends_on "candid82/brew/joker"
   # depends_on "https://raw.githubusercontent.com/candid82/homebrew-brew/2491ed79f9733e6d58b41eef0a771659a0eed162/joker.rb"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
-  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.5.6/goku.zip"
-  sha256 "49a958d0b7b374cbb9700a5f76f82441da84bcedbc50f5e550de1ccb938c4127"
+  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.6.0/goku.zip"
+  sha256 "f07748c2da7347a3b65826cc60827a3c770cdbb5e66fee137391668e5d1d0014"
 
   def install
     bin.install "goku"
@@ -25,10 +24,17 @@ class Goku < Formula
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>/bin/zsh</string>
-        <string>-c</string>
-        <string>exec -a gokuw #{Formula["watchexec"].opt_bin}/watchexec --restart -e edn --watch #{ENV["HOME"]}/.config/karabiner.edn #{opt_bin}/goku</string>
+        <string>#{opt_bin}/goku</string>
       </array>
+      <key>WatchPaths</key>
+      <array>
+          <string>#{ENV["HOME"]}/.config/karabiner.edn</string>
+      </array>
+      <key>EnvironmentVariables</key>
+      <dict>
+          <key>GOKU_EDN_CONFIG_FILE</key>
+          <string>#{ENV["HOME"]}/.config/karabiner.edn</string>
+      </dict>
       <key>StandardErrorPath</key>
       <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
       <key>StandardOutPath</key>
