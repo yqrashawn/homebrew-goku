@@ -2,7 +2,7 @@
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
 class Goku < Formula
   depends_on "candid82/brew/joker"
-  # depends_on "https://raw.githubusercontent.com/candid82/homebrew-brew/2491ed79f9733e6d58b41eef0a771659a0eed162/joker.rb"
+  depends_on "watchexec"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
   url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.6.0/goku.zip"
@@ -13,37 +13,13 @@ class Goku < Formula
     bin.install "gokuw"
   end
 
-  plist_options :manual => "gokuw"
-
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-      <string>#{plist_name}</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{opt_bin}/goku</string>
-      </array>
-      <key>WatchPaths</key>
-      <array>
-          <string>#{ENV["HOME"]}/.config/karabiner.edn</string>
-      </array>
-      <key>EnvironmentVariables</key>
-      <dict>
-          <key>GOKU_EDN_CONFIG_FILE</key>
-          <string>#{ENV["HOME"]}/.config/karabiner.edn</string>
-      </dict>
-      <key>StandardErrorPath</key>
-      <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
-      <key>StandardOutPath</key>
-      <string>#{ENV["HOME"]}/Library/Logs/goku.log</string>
-      <key>RunAtLoad</key>
-      <true/>
-    </dict>
-    </plist>
-  EOS
+  service do
+    run "#{opt_bin}/gokuw"
+    environment_variables PATH: std_service_path_env
+    keep_alive true
+    run_at_load true
+    log_path "#{ENV["HOME"]}/Library/Logs/goku.log"
+    error_log_path "#{ENV["HOME"]}/Library/Logs/goku.log"
   end
 
   test do
