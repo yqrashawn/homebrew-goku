@@ -8,6 +8,14 @@ class Goku < Formula
   url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.0/goku.zip"
   sha256 "45dc037474ef290cf413a38c586fbf32ba80421d28a6c23a7224444b44166812"
 
+  if Hardware::CPU.arm?
+    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.0/goku-arm.zip"
+    sha256 "1e3392866e232b1ff5e2b61cc65f2961247f71e4f8f7b2de234b71835371bea5"
+  else
+    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.0/goku.zip"
+    sha256 "45dc037474ef290cf413a38c586fbf32ba80421d28a6c23a7224444b44166812"
+  end
+
   def install
     bin.install "goku"
     bin.install "gokuw"
