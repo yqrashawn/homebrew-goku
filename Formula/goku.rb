@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
 class Goku < Formula
-  depends_on "candid82/brew/joker"
+  depends_on "joker"
   depends_on "watchexec"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
