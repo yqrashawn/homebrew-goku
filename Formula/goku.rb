@@ -5,15 +5,13 @@ class Goku < Formula
   depends_on "watchexec"
   desc "karabiner configurator"
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
-  url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.0/goku.zip"
-  sha256 "45dc037474ef290cf413a38c586fbf32ba80421d28a6c23a7224444b44166812"
 
   if Hardware::CPU.arm?
-    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.0/goku-arm.zip"
-    sha256 "1e3392866e232b1ff5e2b61cc65f2961247f71e4f8f7b2de234b71835371bea5"
+    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.1/goku-arm.zip"
+    sha256 "f5a129f6b8afa138fdc32e674bb8e964ac064cf038a4b96d7d6b267becbf65ec"
   else
-    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.0/goku.zip"
-    sha256 "45dc037474ef290cf413a38c586fbf32ba80421d28a6c23a7224444b44166812"
+    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.1/goku.zip"
+    sha256 "e6344a247bd001fb0dd8caad5da8c545211f79d5b6fa5c169b23e96540388a1e"
   end
 
   def install
