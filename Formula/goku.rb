@@ -7,11 +7,11 @@ class Goku < Formula
   homepage "https://github.com/yqrashawn/GokuRakuJoudo"
 
   if Hardware::CPU.arm?
-    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.1/goku-arm.zip"
-    sha256 "f5a129f6b8afa138fdc32e674bb8e964ac064cf038a4b96d7d6b267becbf65ec"
+    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.2/goku-arm.zip"
+    sha256 "9a3cf5243d76536dcf8bc92e9842ed4fd10d857a57f036f82d44b70ceb4fe463"
   else
-    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.1/goku.zip"
-    sha256 "e6344a247bd001fb0dd8caad5da8c545211f79d5b6fa5c169b23e96540388a1e"
+    url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.7.2/goku.zip"
+    sha256 "0856bc8b866654a1f98cda790fcaef8dac8b8f720d962c169a726d285eb28018"
   end
 
   def install
