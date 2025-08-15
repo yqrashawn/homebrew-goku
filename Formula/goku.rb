@@ -11,7 +11,7 @@ class Goku < Formula
     sha256 "c912f151f01067eac4effe36c278e5b3a5274febdbfdbe58de5556ba36461008"
   else
     url "https://github.com/yqrashawn/GokuRakuJoudo/releases/download/v0.8.0/goku.zip"
-    sha256 "85b93b405d244de05ca2de0e155ff285539457f3a9138e1dffb9e87dda018a98"
+    sha256 "66b2f06f79f6375bb96dbb0403f8c1018641793b3126b892bb598c041c6f0df1"
   end
 
   def install
